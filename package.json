@@ -1,6 +1,6 @@
 {
   "name": "idom-adaptor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Incremental DOM adaptors",
   "main": "lib/idom.js",
   "scripts": {
