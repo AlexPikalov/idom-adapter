@@ -1,7 +1,7 @@
 {
   "name": "idom-adapter",
   "version": "0.0.1",
-  "description": "Incremental DOM adapters",
+  "description": "Incremental DOM adaptors",
   "main": "lib/idom.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
