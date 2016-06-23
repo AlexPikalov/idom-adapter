@@ -1,4 +1,4 @@
-# idom-adapter
+# idom-adaptor
 It provides very simple adaptors for [Incremental DOM](http://google.github.io/incremental-dom).
 
 ## Abstract classes (interfaces)
