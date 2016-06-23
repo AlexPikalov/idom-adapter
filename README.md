@@ -16,7 +16,7 @@ These classes are just tiny wrappers over Incremental DOM's `elementOpen`/`eleme
 
 ## Helpers
 * `ipatch(hostEl, el, data)` - wrapper over Incremental DOM's patch. `hostEl` - HTML element where `el` will be rendered, `el` is an adaptor that implements `AttachableNode` interface. Data is a data that will be passed to `patch` function as a third argument.
-* `data-xid` - HTML attribute for passing a key to Incremental DOM function calls `<div data-xid="foo"></div>` -> `new El('div', {staticAttrs: ['data-xid', 'foo'], dynamicAttrs: []}, [], 'foo')`
+* `data-xid` - HTML attribute for passing a key to Incremental DOM function calls, i.e. `<div data-xid="foo"></div>` -> `new El('div', {staticAttrs: ['data-xid', 'foo'], dynamicAttrs: []}, [], 'foo')` that is effectively equivalent to `elementOpen('div', 'foo', ['data-xid', 'foo']);elementClose('div');`
 
 ## Get from JSX
 More details about JSX itself can be found in [specification](https://facebook.github.io/jsx/)
