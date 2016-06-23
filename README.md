@@ -6,7 +6,7 @@ There are few abstract classes which in fact provide usefull interfaces for furt
 
 * `AttachableNode` is an abstract class that has one empty method `attach`
 * `AbstractEl` implements `AttachableNode` and has following methods: `patch` - empty method that should be implemented in concrete elements, `attach` - implementation of AttachableNode's `attach` method, `beforeAttach` and `afterAttach` - life-cicle hooks are being invoked before and after element rendering respectively.
- 
+
 ## Concrete classes
 These classes are just tiny wrappers over Incremental DOM's `elementOpen`/`elementClose`, `elementVoid` and `text`
 
@@ -16,6 +16,7 @@ These classes are just tiny wrappers over Incremental DOM's `elementOpen`/`eleme
 
 ## Helpers
 * `ipatch(hostEl, el, data)` - wrapper over Incremental DOM's patch. `hostEl` - HTML element where `el` will be rendered, `el` is an adaptor that implements `AttachableNode` interface. Data is a data that will be passed to `patch` function as a third argument.
+* `data-xid` - HTML attribute for passing a key to Incremental DOM function calls `<div data-xid="foo"></div>` -> `new El('div', {staticAttrs: ['data-xid', 'foo'], dynamicAttrs: []}, [], 'foo')`
 
 ## Get from JSX
 More details about JSX itself can be found in [specification](https://facebook.github.io/jsx/)
