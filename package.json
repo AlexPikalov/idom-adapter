@@ -1,0 +1,27 @@
+{
+  "name": "idom-adapter",
+  "version": "0.0.1",
+  "description": "Incremental DOM adapters",
+  "main": "lib/idom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexPikalov/idom-adapter.git"
+  },
+  "keywords": [
+    "incremental",
+    "dom"
+  ],
+  "author": "Alex Pikalov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexPikalov/idom-adapter/issues"
+  },
+  "homepage": "https://github.com/AlexPikalov/idom-adapter#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
