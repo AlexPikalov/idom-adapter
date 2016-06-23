@@ -19,13 +19,13 @@ class AbstractEl extends AttachableNode {
 
     afterAttach() {}
 
-    _patch() {
+    patch() {
         throw new Error('AbstractEl is abstract and cannot be rendered or attached');
     }
 
     attach() {
         this.beforeAttach(this);
-        this._patch();
+        this.patch();
         this.afterAttach(this);
     }
 }
@@ -36,7 +36,7 @@ export class ElVoid extends AbstractEl {
         super(el, attrs, id);
     }
 
-    _patch() {
+    patch() {
         elementVoid(this._el, this._id, this._attrs.staticAttrs, ...this._attrs.dynamicAttrs);
     }
 }
@@ -48,7 +48,7 @@ export class El extends AbstractEl {
         this._children = children || [];
     }
 
-    _patch() {
+    patch() {
         elementOpen(this._el, this._id, this._attrs.staticAttrs, ...this._attrs.dynamicAttrs);
         flatten(this._children)
             .map(child => child instanceof AttachableNode ? child : new Text(child))
@@ -73,10 +73,10 @@ export class Text extends AttachableNode {
     }
 
     attach() {
-        this._patch();
+        this.patch();
     }
 
-    _patch() {
+    patch() {
         text(this._text);
     }
 }
