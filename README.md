@@ -10,8 +10,8 @@ There are few abstract classes which in fact provide usefull interfaces for furt
 ## Concrete classes
 These classes are just tiny wrappers over Incremental DOM's `elementOpen`/`elementClose`, `elementVoid` and `text`
 
-* `new El(el, attrs, children, id)` - adaptor for non-empty elements. It takes following arguments: `el` - tag name (required), `attrs` - `{staticAttrs: [], dynamicAttrs: []}` (optional), `children` - array that can contain any class that implements `AttachableNode` (optional), `id` - Incrementa DOM's key (optional). It implements `AbstractEl`.
-* `new ElVoid(el, attrs, id)` - adaptor for `elementVoid`. It takes following arguments: `el` - tag name (required), `attrs` - `{staticAttrs: [], dynamicAttrs: []}` (optional), `id` - Incrementa DOM's key (optional). On attach it attaches chilred recursively. It implements `AbstractEl`.
+* `new El(el, attrs, children, id)` - adaptor for non-empty elements. It takes following arguments: `el` - tag name (required), `attrs` - `{staticAttrs: [], dynamicAttrs: []}` (optional), `children` - array that can contain any class that implements `AttachableNode` (optional), `id` - Incrementa DOM's key (optional). On attach it attaches chilred recursively. It implements `AbstractEl`.
+* `new ElVoid(el, attrs, id)` - adaptor for `elementVoid`. It takes following arguments: `el` - tag name (required), `attrs` - `{staticAttrs: [], dynamicAttrs: []}` (optional), `id` - Incrementa DOM's key (optional). It implements `AbstractEl`.
 * `new Text(text)` - adaptor for `text`. It takes only one argument the text that will be rendered. Implements `AttachableNode` interface.
 
 ## Helpers
